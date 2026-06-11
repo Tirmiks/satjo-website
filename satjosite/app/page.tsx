@@ -1,4 +1,10 @@
+'use client'
 import Link from "next/link"
+import { useEffect } from 'react';
+import { Fancybox } from '@fancyapps/ui';
+import '@fancyapps/ui/dist/fancybox/fancybox.css';
+import GallerySection from "@/ui/main/Galery";
+import Video from "@/ui/main/Video";
 
 export default function Home() {
   return (
@@ -14,7 +20,32 @@ export default function Home() {
        <span className="text-[#f0f0f0]">PLAY ON STEAM </span></Link>
       </div>
     </div>
-    <div>                                                       {/* 2nd part of page (after scroll) */}
+    {/* 2nd part of page (after scroll) */}
+    <div className="bg-[#1a1a1a] min-h-screen p-10 relative">
+
+      <div className="flex flex-col items-center justify-center text-[#f0f0f0] pb-28">
+        <div className="px-10 py-10">
+        <Video />
+        </div>
+        <div className="text-sm text-center max-w-md">
+          <div className="text-justify [text-align-last:center] ">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum
+          </div>
+        </div>
+        <div className="grid grid-cols-3 gap-8 mt-10">
+          <GallerySection />  
+        </div>
+
+        <div className="absolute bottom-6 right-6 text-sm max-w-xs text-[#8f8f8f]">
+          Valve, the Valve logo, Steam, and the Steam logo are trademarks and/or registered trademarks of Valve Corporation. Open Fortness is a fan creation and is not affiliated with Valve Corporation.
+        </div>
+      </div>
 
     </div>
   </>
